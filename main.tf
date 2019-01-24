@@ -17,6 +17,14 @@ terraform {
   required_version = ">= 0.10.0"
 }
 
+data "terraform_remote_state" "azurerm" {
+  backend = "atlas"
+  config {
+    name = "stoffee/terraform-azurerm-vault"
+  }
+}
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE THE NECESSARY NETWORK RESOURCES FOR THE EXAMPLE
 # ---------------------------------------------------------------------------------------------------------------------

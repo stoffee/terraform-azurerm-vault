@@ -47,7 +47,7 @@ resource "azurerm_subnet" "consul" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 module "consul_servers" {
-  source = "https://github.com/stoffee/terraform-azurerm-consul.git"
+  source = "git::https://github.com/stoffee/terraform-azurerm-consul.git"
 
   cluster_name = "${var.consul_cluster_name}"
   cluster_size = "${var.num_consul_servers}"

@@ -59,10 +59,14 @@ module "consul_servers" {
   location = "${var.location}"
   custom_data = "${data.template_file.custom_data_consul.rendered}"
   instance_size = "${var.instance_size}"
+  image_uri = "${var.image_uri}"
   image_id = "${var.image_uri}"
   subnet_id = "${azurerm_subnet.consul.id}"
   allowed_inbound_cidr_blocks = []
   subscription_id = "${var.subscription_id}"
+  client_id = "${var.client_id}"
+  secret_access_key = "${var.secret_access_key}"
+  tenant_id = "${var.tenant_id}"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------

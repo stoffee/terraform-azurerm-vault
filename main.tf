@@ -62,6 +62,7 @@ module "consul_servers" {
   image_id = "${var.image_uri}"
   subnet_id = "${azurerm_subnet.consul.id}"
   allowed_inbound_cidr_blocks = []
+  subscription_id = "${var.subscription_id}"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------

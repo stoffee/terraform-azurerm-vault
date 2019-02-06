@@ -34,7 +34,6 @@ variable "storage_account_key" {
 
 variable "image_uri" {
   description = "The URI to the Azure image that should be deployed to the consul cluster."
-  default = "vault-consul-ubuntu-2019-01-24-210604"
 }
 
 variable "key_data" {

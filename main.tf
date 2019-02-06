@@ -17,12 +17,12 @@ terraform {
   required_version = ">= 0.10.0"
 }
 
-data "terraform_remote_state" "azurerm" {
-  backend = "atlas"
-  config {
-    name = "stoffee/terraform-azurerm-vault"
-  }
-}
+#data "terraform_remote_state" "azurerm" {
+#  backend = "atlas"
+#  config {
+#    name = "stoffee/terraform-azurerm-vault"
+#  }
+#}
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ module "consul_servers" {
   image_id = "${var.image_uri}"
   subnet_id = "${azurerm_subnet.consul.id}"
   allowed_inbound_cidr_blocks = []
-  subscription_id = "${var.subscription_id}"
+  #subscription_id = "${var.subscription_id}"
   client_id = "${var.client_id}"
   secret_access_key = "${var.secret_access_key}"
   tenant_id = "${var.tenant_id}"

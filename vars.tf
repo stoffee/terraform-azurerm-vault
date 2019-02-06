@@ -20,10 +20,12 @@ variable "secret_access_key" {
 
 variable "resource_group_name" {
   description = "The name of the Azure resource group consul will be deployed into. This RG should already exist"
+  default = "cd-demo"
 }
 
 variable "storage_account_name" {
   description = "The name of an Azure Storage Account. This SA should already exist"
+  default = "democd"
 }
 
 variable "storage_account_key" {
@@ -32,6 +34,7 @@ variable "storage_account_key" {
 
 variable "image_uri" {
   description = "The URI to the Azure image that should be deployed to the consul cluster."
+  default = "vault-consul-ubuntu-2019-01-24-210604"
 }
 
 variable "key_data" {
@@ -41,6 +44,7 @@ variable "key_data" {
 variable "allowed_inbound_cidr_blocks" {
   description = "A list of CIDR-formatted IP address ranges from which the Azure Instances will allow connections to Consul"
   type        = "list"
+  default = ["0.0.0.0/0"]
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -49,7 +53,7 @@ variable "allowed_inbound_cidr_blocks" {
 # ---------------------------------------------------------------------------------------------------------------------
 variable "location" {
   description = "The Azure region the consul cluster will be deployed in"
-  default = "East US"
+  default = "West US"
 }
 
 variable "address_space" {

@@ -15,6 +15,10 @@ provider "azurerm" {
 
 terraform {
   required_version = ">= 0.10.0"
+  backend "atlas" {
+    name = "stoffee/terraform-azurerm-vault"
+    address = "https://app.terraform.io" # optional
+  }
 }
 
 #data "terraform_remote_state" "azurerm" {
